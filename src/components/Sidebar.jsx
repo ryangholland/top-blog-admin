@@ -3,7 +3,7 @@ import { Nav } from "react-bootstrap";
 export default function Sidebar() {
   return (
     <div
-      className="d-flex flex-column bg-dark text-light vh-100 p-3"
+      className="d-flex flex-column bg-dark text-light  p-3"
       style={{ width: "250px" }}
     >
       {/* Project Name */}
