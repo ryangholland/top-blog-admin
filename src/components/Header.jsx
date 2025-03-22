@@ -1,12 +1,12 @@
 import { Navbar, Container, Dropdown } from "react-bootstrap";
 import { GearFill } from "react-bootstrap-icons";
 
-export default function Header() {
+export default function Header({ pageTitle, userName, onLogout }) {
   return (
     <Navbar bg="dark" variant="dark" className="px-3">
       <Container fluid>
         {/* Left: Page Title */}
-        <Navbar.Brand className="fs-2">Home</Navbar.Brand>
+        <Navbar.Brand className="fs-2">{pageTitle}</Navbar.Brand>
 
         {/* Right: Settings Icon & User Dropdown */}
         <div className="d-flex align-items-center">
@@ -20,10 +20,10 @@ export default function Header() {
               className="text-light border-0"
               id="user-dropdown"
             >
-              Hello, ryan!
+              Hello, {userName}!
             </Dropdown.Toggle>
             <Dropdown.Menu align="end">
-              <Dropdown.Item>Log Out</Dropdown.Item>
+              <Dropdown.Item onClick={onLogout}>Log Out</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
