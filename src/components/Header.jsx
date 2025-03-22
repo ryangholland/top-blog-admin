@@ -3,7 +3,7 @@ import { GearFill } from "react-bootstrap-icons";
 
 export default function Header({ pageTitle, userName, onLogout }) {
   return (
-    <Navbar bg="dark" variant="dark" className="px-3">
+    <Navbar bg="dark" variant="dark" className="px-3" style={{ height: "110px" }}>
       <Container fluid>
         {/* Left: Page Title */}
         <Navbar.Brand className="fs-2">{pageTitle}</Navbar.Brand>
