@@ -7,16 +7,16 @@ import Settings from "./pages/Settings";
 
 function App() {
   return (
-    <Layout>
-      <Router>
+    <Router>
+      <Layout>
         <Routes>
           <Route path="/posts" element={<Posts />} />
           <Route path="/tags" element={<Tags />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/" element={<Home />} />
         </Routes>
-      </Router>
-    </Layout>
+      </Layout>
+    </Router>
   );
 }
 
