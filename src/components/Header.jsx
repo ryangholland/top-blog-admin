@@ -1,12 +1,29 @@
+import { useLocation } from "react-router";
 import { Navbar, Container, Dropdown } from "react-bootstrap";
 import { GearFill } from "react-bootstrap-icons";
 
-export default function Header({ pageTitle, userName, onLogout }) {
+export default function Header({ userName, onLogout }) {
+  const location = useLocation();
+
+  const pageTitles = {
+    "/": "Home",
+    "/posts": "Posts",
+    "/tags": "Tags",
+    "/settings": "Settings",
+  };
+
+  const currentPage = pageTitles[location.pathname] || "Home";
+
   return (
-    <Navbar bg="dark" variant="dark" className="px-3" style={{ height: "110px" }}>
+    <Navbar
+      bg="dark"
+      variant="dark"
+      className="px-3"
+      style={{ height: "110px" }}
+    >
       <Container fluid>
         {/* Left: Page Title */}
-        <Navbar.Brand className="fs-2">{pageTitle}</Navbar.Brand>
+        <Navbar.Brand className="fs-2">{currentPage}</Navbar.Brand>
 
         {/* Right: Settings Icon & User Dropdown */}
         <div className="d-flex align-items-center">

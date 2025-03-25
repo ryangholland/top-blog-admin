@@ -9,7 +9,6 @@ export default function Layout({ children }) {
         <Sidebar />
         <div className="flex-grow-1">
           <Header
-            pageTitle="Home"
             userName="ryan"
             onLogout={() => console.log("Logging out...")}
           />
